@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9A0A09A-9D53-4AD1-BE0B-D347EF3A130C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ArtGallerySystem</RootNamespace>
+    <AssemblyName>ArtGallerySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>wolfIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Desktop\ArtGalleryProject\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminicon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminicon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminicon12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminicon13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolf2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addiconF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addiconFsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addiconFsmall2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editiconsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editiconsmall1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editiconsmall2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesicon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesiconsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historyiconsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vanGoghStarryNight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vanGoghStarryNightOpacity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vanGoghStarryNight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin icon small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin icon small1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin icon small2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addiconFsmallSelected1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editiconsmallSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\displayIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\displayIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\displayIconSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeIconSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browseEmpIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browseEmpIconSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogInMenuBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogInMenuBG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min buttonLogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeIconUpdated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeIconUpdatedSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wolfIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
